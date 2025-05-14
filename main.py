@@ -55,6 +55,8 @@ class Record:
         old = self.find_phone(old_phone_str)
         if old is None:
             raise ValueError("Old phone not found")
+        Phone(new_phone_str)
+
         self.remove_phone(old_phone_str)
         self.add_phone(new_phone_str)
 
